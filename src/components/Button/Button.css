@@ -1,0 +1,12 @@
+.btn-category {
+  font-size: 17px;
+  line-height: 1;
+  padding:1rem 0 13px;
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}

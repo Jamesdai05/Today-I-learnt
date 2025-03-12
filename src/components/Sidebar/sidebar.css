@@ -1,0 +1,42 @@
+
+.category {
+  margin-bottom: 1rem;
+}
+
+.all {
+  margin-bottom: 1.8rem;
+}
+
+.all .btn-category {
+  background-image: linear-gradient(135deg, #3b82f6, #ef4444, #16a34a, #eab308);
+}
+
+.technology .btn-category {
+  background-color: rgba(59,130,246,1);
+}
+
+.science .btn-category {
+  background-color: rgba(22,163,74,1);
+}
+
+.finance .btn-category {
+  background-color: rgba(239,68,68,1);
+}
+
+.society .btn-category {
+  background-color: rgba(234,179,8,1);
+}
+
+.entertainment .btn-category {
+  background-color: rgba(219,39,119,1);
+}
+.health .btn-category {
+  background-color: rgba(20,184,166,1);
+}
+.history .btn-category {
+  background-color: rgba(249,115,22,1);
+}
+.news .btn-category {
+  background-color: rgba(139,92,246,1);
+}
+

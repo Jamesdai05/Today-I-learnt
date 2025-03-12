@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+body {
+  font-family: "Coiny", system-ui,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #292524;
+  color:#fff;
+}
+
+.App{
+  max-width: 1500px;
+  margin: 1rem auto;
+}
