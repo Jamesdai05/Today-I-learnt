@@ -17,3 +17,11 @@ body {
   max-width: 1500px;
   margin: 1rem auto;
 }
+
+h1 {
+  font-family: "Coiny";
+}
+
+.btn {
+  font-family: "Coiny";
+}

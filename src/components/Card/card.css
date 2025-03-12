@@ -25,5 +25,8 @@ section {
   border-radius: 20px;
   width: 100%;
   margin:0 auto;
-
+  font-family: "Coiny";
+  line-height: 1.2;
+  font-weight: 400;
+  letter-spacing: 0.5px;
 }
