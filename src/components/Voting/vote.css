@@ -1,0 +1,15 @@
+.votes {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.vote {
+  background-color: #78716c;
+  padding: 6px 12px;
+  text-align: center;
+  border:none;
+  border-radius: 100px;
+}
