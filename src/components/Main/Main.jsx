@@ -17,7 +17,7 @@ const Main = () => {
   useEffect(()=>{
     const fetchData=async()=>{
       setIsLoading(true);
-      const {data,error} = await supabase.from("Facts").select();
+      const {data,error} = await supabase.from("Facts").select("*").limit(5);
 
       if(error){
         setFetchError("Unable to get the data");
