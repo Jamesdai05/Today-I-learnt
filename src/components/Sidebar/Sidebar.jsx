@@ -8,28 +8,28 @@ const Sidebar = () => {
         <Button>All</Button>
       </li>
       <li className="category technology">
-        <Button>Technology</Button>
+        <Button color={"#3b82f6"}>Technology</Button>
       </li>
       <li className="category science">
-        <Button>Science</Button>
+        <Button color={"#16a34a"}>Science</Button>
       </li>
       <li className="category finance">
-        <Button>Finance</Button>
+        <Button color={"#ef4444"}>Finance</Button>
       </li>
       <li className="category society">
-        <Button>Society</Button>
+        <Button color={"#eab308"}>Society</Button>
       </li>
       <li className="category entertainment">
-        <Button>Entertainment</Button>
+        <Button color={"#db2777"}>Entertainment</Button>
       </li>
       <li className="category health">
-        <Button> health</Button>
+        <Button color={"#14b8a6"}> health</Button>
       </li>
       <li className="category history">
-        <Button>History</Button>
+        <Button color={"#f97316"}>History</Button>
       </li>
       <li className="category news">
-        <Button>News</Button>
+        <Button color={"#8b5cf6"}>News</Button>
       </li>
     </ul>
   );
