@@ -44,20 +44,35 @@ const Main = () => {
 
   return (
     <div className="main">
-      <Sidebar setCurrentCategory={setCurrentCategory}/>
-      <div className="data">
-        { isLoading ? <Loader /> : facts.map(fact=>(
-          <Card
-            key={fact.id}
-            text={fact.facts}
-            category={fact.category}
-            source={fact.source}
-            interesting={fact.votesInteresting}
-            mindBlowing={fact.votesMindblowing}
-            votesFalse={fact.votesFalse} />))}
-      <p className="font-normal text-2xl">There are total {facts.length} facts in the database.</p>
-      </div>
+      <Sidebar setCurrentCategory={setCurrentCategory} />
+
+      {facts.length === 0 ? (
+        <p className="text-3xl">
+          No facts for this category yet! Create the first one ✌️
+        </p>
+      ) : (
+        <div className="data">
+          {isLoading ? (
+            <Loader />
+          ) : (
+            facts.map((fact) => (
+              <Card
+                key={fact.id}
+                text={fact.facts}
+                category={fact.category}
+                source={fact.source}
+                interesting={fact.votesInteresting}
+                mindBlowing={fact.votesMindblowing}
+                votesFalse={fact.votesFalse}
+              />
+            ))
+          )}
+          <p className="font-normal text-2xl">
+            There are total {facts.length} facts in the database.
+          </p>
+        </div>
+      )}
     </div>
-  )
+  );
 }
 export default Main;
