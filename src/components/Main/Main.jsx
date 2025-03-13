@@ -24,7 +24,7 @@ const Main = () => {
       if(currentCategory !=="all") query=query.eq("category",currentCategory);
 
 
-      const {data,error} = await query
+      const {data,error} = await query.limit(100)
 
       if(error){
         setFetchError("Unable to get the data");
