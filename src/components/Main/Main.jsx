@@ -47,7 +47,7 @@ const Main = () => {
       <Sidebar setCurrentCategory={setCurrentCategory} />
 
       {facts.length === 0 ? (
-        <p className="text-3xl">
+        <p className="font-bold text-3xl">
           No facts for this category yet! Create the first one ✌️
         </p>
       ) : (
