@@ -4,7 +4,7 @@ import Card from "../Card/Card.jsx";
 import Sidebar from "../Sidebar/Sidebar.jsx";
 import "./main.css";
 import supabase from "../../config/supabaseClient.js";
-import { initialFacts } from "../../data.js";
+// import { initialFacts } from "../../data.js";
 
 
 const Main = () => {
@@ -15,31 +15,31 @@ const Main = () => {
 
   useEffect(()=>{
     const fetchData=async()=>{
-      const {data,error} = await supabase.from(facts).select();
+      const {data,error} = await supabase.from("Facts").select();
 
       if(error){
         setFetchError("Unable to get the data");
-        console.log(error);
+        // console.log(error);
         setFacts(null);
       };
-      if(facts){
-        console.log(facts)
-        setFacts(facts);
+      if(data){
+        console.log(data)
+        setFacts(data);
         setFetchError(null);
       }
     }
     fetchData();
-  },[facts])
+  },[])
 
 
   return (
     <div className="main">
       <Sidebar />
       <div className="data">
-        {initialFacts.map(fact=>(
+        {facts.map(fact=>(
           <Card
             key={fact.id}
-            text={fact.text}
+            text={fact.facts}
             category={fact.category}
             source={fact.source}
             interesting={fact.votesInteresting}

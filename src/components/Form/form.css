@@ -9,7 +9,7 @@
   border-radius: 16px;
   gap:16px;
   font-size: 18px;
-
+  max-width: 1500px;
 }
 
 .form-fact input:first-child {

@@ -17,7 +17,7 @@ section {
 }
 
 section p {
-  max-width: 60ch;
+  max-width: 55ch;
 }
 
 .tag {
@@ -34,4 +34,5 @@ section p {
   line-height: 1.1;
   font-weight: 400;
   letter-spacing: 0.5px;
+  flex-shrink: 0;
 }

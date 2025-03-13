@@ -8,6 +8,7 @@
   -o-border-radius: 100px;
   padding:20px 32px 17px;
   font-size: 20px;
+  cursor: pointer;
 }
 
 header {
