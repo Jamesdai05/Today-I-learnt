@@ -20,6 +20,10 @@ section p {
   max-width: 60ch;
 }
 
+.tag {
+  padding: 0 0.2em;
+}
+
 .tag button {
   padding: 3px 10px 0;
   font-size: 17px;

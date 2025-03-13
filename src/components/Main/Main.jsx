@@ -1,9 +1,16 @@
-import { initialFacts } from "../../data.js";
+// import { initialFacts } from "../../data.js";
+import { useState } from "react";
 import Card from "../Card/Card.jsx";
 import Sidebar from "../Sidebar/Sidebar.jsx";
 import "./main.css";
 
 const Main = () => {
+
+  const [facts,setFacts]=useState([]);
+
+  const 
+
+
   return (
     <div className="main">
       <Sidebar />
