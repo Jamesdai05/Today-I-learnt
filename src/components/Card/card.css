@@ -21,7 +21,7 @@ section p {
 }
 
 .tag button {
-  padding: 3px 10px;
+  padding: 3px 10px 0;
   font-size: 17px;
   border-radius: 20px;
   width: 100%;
