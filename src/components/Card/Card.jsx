@@ -1,19 +1,19 @@
 import Voting from "../Voting/Voting.jsx";
 import "./card.css";
+import { initialFacts } from "../../data.js";
 
-const Card = () => {
+const Card = ({text,category,interesting,source,mindBlowing,votesFalse}  ) => {
+  // console.log(initialFacts.text);
   return (
     <section className="p-4">
       <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis
-        rerum expedita fuga repellendus quisquam voluptatibus amet id?
-        Nobis.(Source)
+        {text}<a href={source}>(Source)</a>
       </p>
       <div className="tag">
-        <span>Technology</span>
+        <span>{category}</span>
       </div>
       <div className="button">
-        <Voting />
+        <Voting interesting={interesting} votingFalse={votesFalse} mindBlowing={mindBlowing}/>
       </div>
     </section>
   );

@@ -1,5 +1,6 @@
 import logo from "/Images/logo.png";
-import "./header.css"
+import "./header.css";
+
 
 
 const Header = ({handleClick}) => {
