@@ -13,11 +13,18 @@ const Main = () => {
   const [facts,setFacts]=useState([]);
   const [isLoading,setIsLoading]=useState(false)
   const [fetchError,setFetchError]=useState(null);
+  const [currentCategory,setCurrentCategory]=useState("ALL");
 
   useEffect(()=>{
     const fetchData=async()=>{
       setIsLoading(true);
-      const {data,error} = await supabase.from("Facts").select("*").limit(5);
+
+      let query=supabase.from("Facts").select("*")
+
+      if(currentCategory !=="all") query=query.eq("category",currentCategory);
+
+
+      const {data,error} = await query
 
       if(error){
         setFetchError("Unable to get the data");
@@ -32,12 +39,12 @@ const Main = () => {
       }
     }
     fetchData();
-  },[])
+  },[currentCategory])
 
 
   return (
     <div className="main">
-      <Sidebar />
+      <Sidebar setCurrentCategory={setCurrentCategory}/>
       <div className="data">
         { isLoading ? <Loader /> : facts.map(fact=>(
           <Card
@@ -48,7 +55,7 @@ const Main = () => {
             interesting={fact.votesInteresting}
             mindBlowing={fact.votesMindblowing}
             votesFalse={fact.votesFalse} />))}
-      <p className="font-normal text-2xl">There are total 11 facts in the database.</p>
+      <p className="font-normal text-2xl">There are total {facts.length} facts in the database.</p>
       </div>
     </div>
   )

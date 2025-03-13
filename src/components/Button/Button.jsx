@@ -1,7 +1,7 @@
-import { CATEGORIES } from "../../data.js";
+// import { CATEGORIES } from "../../data.js";
 import "./Button.css";
 
-const Button = ({children}) => {
+const Button = ({children,color,setCurrentCategory}) => {
 
   // for (const element of CATEGORIES) {
   //   if (element.name === children) {
@@ -11,20 +11,20 @@ const Button = ({children}) => {
   //   }
   // }
 
-  const getColor=(children)=>{
-    for(const element of CATEGORIES){
-      if(element.name === children){
-        return element.color;
-      }
-    }
-  }
-  const color=getColor(children);
+  // const getColor=(children)=>{
+  //   for(const element of CATEGORIES){
+  //     if(element.name === children){
+  //       return element.color;
+  //     }
+  //   }
+  // }
+  // const color=getColor(children);
   // const color= getColor(children);
 
   const style={backgroundColor:color,fontFamily:"Coiny",fontSize:"17px"}
 
   return (
-    <button className="btn-category uppercase" type="button" style={style}>{children}</button>
+    <button className="btn-category uppercase" type="button" style={style} onClick={()=>setCurrentCategory(children)}>{children}</button>
   )
 }
 export default Button

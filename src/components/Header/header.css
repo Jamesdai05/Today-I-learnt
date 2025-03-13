@@ -9,6 +9,7 @@
   padding:20px 32px 17px;
   font-size: 20px;
   cursor: pointer;
+  transition: 0.5s;
 }
 
 header {
@@ -26,4 +27,8 @@ header h1 {
 header img {
   height: 68px;
   width: 68px;
+}
+
+.btn:hover {
+  transform: scale(110%) rotate(-2deg);
 }

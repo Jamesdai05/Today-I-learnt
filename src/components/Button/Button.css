@@ -6,5 +6,18 @@
   width: 100%;
   margin-bottom: 0.5rem;
   cursor: pointer;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+.btn-category:hover {
+  transform: scale(110%) rotate(-2deg);
+  -webkit-transform: scale(110%) rotate(-2deg);
+  -moz-transform: scale(110%) rotate(-2deg);
+  -ms-transform: scale(110%) rotate(-2deg);
+  -o-transform: scale(110%) rotate(-2deg);
 }
 

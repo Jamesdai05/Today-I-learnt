@@ -1,36 +1,20 @@
+import { CATEGORIES } from "../../data.js";
 import Button from "../Button/Button.jsx";
 import "./sidebar.css";
 
-const Sidebar = () => {
+const Sidebar = ({setCurrentCategory}) => {
   return (
     <ul>
       <li className="category all">
-        <Button>All</Button>
+        <Button setCurrentCategory={setCurrentCategory}>all</Button>
       </li>
-      <li className="category technology">
-        <Button >Technology</Button>
-      </li>
-      <li className="category science">
-        <Button>Science</Button>
-      </li>
-      <li className="category finance">
-        <Button >Finance</Button>
-      </li>
-      <li className="category society">
-        <Button>Society</Button>
-      </li>
-      <li className="category entertainment">
-        <Button>Entertainment</Button>
-      </li>
-      <li className="category health">
-        <Button > health</Button>
-      </li>
-      <li className="category history">
-        <Button>History</Button>
-      </li>
-      <li className="category news">
-        <Button>News</Button>
-      </li>
+      {CATEGORIES.map((cate) => (
+        <li className="category" key={cate.name}>
+          <Button color={cate.color} setCurrentCategory={setCurrentCategory}>
+            {cate.name}
+          </Button>
+        </li>
+      ))}
     </ul>
   );
 }
