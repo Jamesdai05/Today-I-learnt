@@ -1,14 +1,12 @@
 .main {
   display: grid;
   grid-template-columns: 300px 80%;
-  column-gap: 3rem;
+  column-gap: 2rem;
 }
 
 .data {
-  /* background-color: skyblue; */
   padding: 0 0 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  /* align-items: center; */
+  justify-content: flex-start;
 }
