@@ -48,6 +48,7 @@ const Main = () => {
             interesting={fact.votesInteresting}
             mindBlowing={fact.votesMindblowing}
             votesFalse={fact.votesFalse} />))}
+      <p className="font-normal text-2xl">There are total 11 facts in the database.</p>
       </div>
     </div>
   )
