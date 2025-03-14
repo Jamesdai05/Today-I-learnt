@@ -9,7 +9,7 @@ import Main from './components/Main/Main.jsx';
 
 function App() {
   const [toggle,setToggle]=useState(false)
-  
+  const [facts, setFacts] = useState([]);
 
 
 
@@ -18,8 +18,8 @@ function App() {
   return (
     <div className='App'>
       <Header toggle={toggle} handleClick={handleToggle}/>
-      {toggle && <Form />}
-      <Main />
+      {toggle && <Form setFacts={setFacts}/>}
+      <Main setFacts={setFacts} facts={facts}/>
     </div>
   )
 }

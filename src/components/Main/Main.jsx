@@ -8,9 +8,9 @@ import Loader from "../Loader/Loader.jsx";
 // import { initialFacts } from "../../data.js";
 
 
-const Main = () => {
+const Main = ({setFacts,facts}) => {
 
-  const [facts,setFacts]=useState([]);
+
   const [isLoading,setIsLoading]=useState(false)
   const [fetchError,setFetchError]=useState(null);
   const [currentCategory,setCurrentCategory]=useState("all");
@@ -33,13 +33,13 @@ const Main = () => {
       };
       if(data){
         setIsLoading(false)
-        console.log(data)
+        // console.log(data)
         setFacts(data);
         setFetchError(null);
       }
     }
     fetchData();
-  },[currentCategory])
+  },[currentCategory,setFacts])
 
 
   return (
@@ -58,9 +58,9 @@ const Main = () => {
             facts.map((fact) => (
               <Card
                 key={fact.id}
-                text={fact.facts}
+                fact={fact.fact}
                 category={fact.category}
-                source={fact.resource}
+                resource={fact.resource}
                 interesting={fact.votesInteresting}
                 mindBlowing={fact.votesMindblowing}
                 votesFalse={fact.votesFalse}

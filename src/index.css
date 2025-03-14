@@ -1,1 +1,6 @@
 @import "tailwindcss";
+
+html,
+:host {
+  text-size-adjust: 100%;
+}
