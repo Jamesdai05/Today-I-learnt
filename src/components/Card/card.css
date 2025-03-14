@@ -36,3 +36,13 @@ section p {
   letter-spacing: 0.5px;
   flex-shrink: 0;
 }
+
+
+a{
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color:wheat;
+}

@@ -13,7 +13,7 @@ const Main = () => {
   const [facts,setFacts]=useState([]);
   const [isLoading,setIsLoading]=useState(false)
   const [fetchError,setFetchError]=useState(null);
-  const [currentCategory,setCurrentCategory]=useState("ALL");
+  const [currentCategory,setCurrentCategory]=useState("all");
 
   useEffect(()=>{
     const fetchData=async()=>{
@@ -60,7 +60,7 @@ const Main = () => {
                 key={fact.id}
                 text={fact.facts}
                 category={fact.category}
-                source={fact.source}
+                source={fact.resource}
                 interesting={fact.votesInteresting}
                 mindBlowing={fact.votesMindblowing}
                 votesFalse={fact.votesFalse}
