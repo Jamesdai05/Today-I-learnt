@@ -6,7 +6,7 @@ import { CATEGORIES } from "../../data.js";
 
 const Card = ({fact,category,interesting,resource,mindBlowing,votesFalse}) => {
   // console.log(initialFacts.text);
-  const categoryInfo = CATEGORIES.find((cat) => cat.name === category);
+  const categoryInfo = CATEGORIES.find((cat) => cat.name === category.toLowerCase());
   // const getColor=getItem.color;
   // console.log(getColor);
   // in case the categoryInfo is not in the array

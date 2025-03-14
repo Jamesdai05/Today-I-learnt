@@ -4,19 +4,20 @@ import { useState } from "react";
 import { CATEGORIES } from "../../data.js";
 import supabase from "../../config/supabaseClient.js";
 
-const isValidUrl = (urlString) => {
-  try {
-    return Boolean(new URL(urlString));
-  } catch (e) {
-    console.log(e);
-    return false;
-  }
-};
+// URL validation function
+  const isValidUrl = (url) => {
+    try {
+      new URL(url);
+      return true;
+    } catch {
+      return false;
+    }
+  };
 
 
 const Form = ({setFacts}) => {
   const [fact, setFact] = useState("");
-  const [resource, setResource] = useState("http://exaple.com");
+  const [resource, setResource] = useState("http://example.com");
   const [category, setCategory] = useState("");
   const [error,setError]=useState(null);
   const length = fact.length;
@@ -29,10 +30,11 @@ const Form = ({setFacts}) => {
       // console.log(fact,source,category)
       // the items insert to the table should be the same as the name of columns
       try{
-        const {data:newFact, error} = await supabase.from("Facts").insert([{fact,category,resource}]).single()
+        const cat=category.toLowerCase()
+        const {data:newFact, error} = await supabase.from("Facts").insert([{fact,cat,resource}]).single()
         console.log(newFact);
         if(error){
-          alert("There are errors",error);
+          alert("There are errors",error?.error);
           console.log(error?.data?.message || error?.error)
         }
         setFacts(prev=>[...prev,newFact])

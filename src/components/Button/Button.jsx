@@ -1,7 +1,7 @@
 // import { CATEGORIES } from "../../data.js";
 import "./Button.css";
 
-const Button = ({children,color="#f0f0f0",setCurrentCategory}) => {
+const Button = ({children,color,setCurrentCategory}) => {
 
 
 

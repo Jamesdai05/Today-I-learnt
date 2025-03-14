@@ -33,7 +33,7 @@ const Main = ({setFacts,facts}) => {
       };
       if(data){
         setIsLoading(false)
-        // console.log(data)
+        console.log(data)
         setFacts(data);
         setFetchError(null);
       }
@@ -55,15 +55,15 @@ const Main = ({setFacts,facts}) => {
           {isLoading ? (
             <Loader />
           ) : (
-            facts.map((fact) => (
+            facts.map((ele) => (
               <Card
-                key={fact.id}
-                fact={fact.fact}
-                category={fact.category}
-                resource={fact.resource}
-                interesting={fact.votesInteresting}
-                mindBlowing={fact.votesMindblowing}
-                votesFalse={fact.votesFalse}
+                key={ele.id}
+                fact={ele.fact}
+                category={ele.category}
+                resource={ele.resource}
+                interesting={ele.votesInteresting}
+                mindBlowing={ele.votesMindblowing}
+                votesFalse={ele.votesFalse}
               />
             ))
           )}
