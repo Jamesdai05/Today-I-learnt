@@ -8,7 +8,7 @@ const Card = ({text,category,interesting,source,mindBlowing,votesFalse}  ) => {
   // console.log(initialFacts.text);
   const getColor=CATEGORIES.find(cat=>cat.name===category).color
 
-  console.log(getColor);
+  // console.log(getColor);
 
   return (
     <section className="p-2">
