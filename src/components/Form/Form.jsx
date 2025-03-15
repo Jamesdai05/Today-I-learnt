@@ -18,7 +18,7 @@ import supabase from "../../config/supabaseClient.js";
 const Form = ({setFacts}) => {
   const [fact, setFact] = useState("");
   const [resource, setResource] = useState("http://example.com");
-  const [category, setCategory] = useState("");
+  let   [category, setCategory] = useState("");
   const [error,setError]=useState(null);
   const length = fact.length;
 
@@ -27,19 +27,20 @@ const Form = ({setFacts}) => {
     e.preventDefault()
     // check the data is valid or not
     if(fact&&isValidUrl(resource)&&category && length<200){
-      // console.log(fact,source,category)
+      // console.log(fact,resource,category.toLowerCase());
       // the items insert to the table should be the same as the name of columns
       try{
-        const cat=category.toLowerCase()
-        const {data:newFact, error} = await supabase.from("Facts").insert([{fact,cat,resource}]).single()
+        const lowerCaseCategory=category.toLowerCase()
+        const {data:newFact, error} = await supabase.from("Facts").insert([{fact,category:lowerCaseCategory,resource}]).select().single()
         console.log(newFact);
         if(error){
-          alert("There are errors",error?.error);
-          console.log(error?.data?.message || error?.error)
+          setError(error.message);
+          console.error(error?.data?.message || error?.error)
         }
         setFacts(prev=>[...prev,newFact])
-        setResource("")
+        setResource("http://example.com")
         setCategory("")
+        setFact("")
         setError(null)
 
       }catch(e){
@@ -73,11 +74,11 @@ const Form = ({setFacts}) => {
         value={category}
         onChange={(e) => setCategory(e.target.value)}
       >
-        <option value="" className="uppercase">
+        <option value="" className="uppercase" disabled>
           select a category
         </option>
         {CATEGORIES.map((c) => (
-          <option key={c.name}>{c.name.toUpperCase()}</option>
+          <option key={c.name} value={c.name.toLowerCase()}>{c.name.toUpperCase()}</option>
         ))}
       </select>
       <div className="post">
@@ -85,6 +86,7 @@ const Form = ({setFacts}) => {
           Post
         </button>
       </div>
+      {error && <p className="error-message">{error}</p>}
     </form>
   );
 }

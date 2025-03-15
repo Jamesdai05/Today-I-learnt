@@ -55,3 +55,7 @@ select {
   padding: 16px;
   border-radius: 100px;
 }
+
+.error-message {
+  background-color: #ef4444;
+}
