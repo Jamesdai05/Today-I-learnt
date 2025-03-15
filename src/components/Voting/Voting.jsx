@@ -6,7 +6,7 @@ const Voting = ({interesting,mindBlowing,votingFalse,handleVote,isUpdating}) => 
       <button
         className="flex  align-middle vote"
         type="button"
-        onClick={handleVote}
+        onClick={() => handleVote("votesInteresting")}
         disabled={isUpdating}
       >
         👍 {interesting}
@@ -14,6 +14,7 @@ const Voting = ({interesting,mindBlowing,votingFalse,handleVote,isUpdating}) => 
       <button
         className="flex  align-middle vote"
         type="button"
+        onClick={() => handleVote("votesMindblowing")}
         disabled={isUpdating}
       >
         🤯 {mindBlowing}
@@ -21,6 +22,7 @@ const Voting = ({interesting,mindBlowing,votingFalse,handleVote,isUpdating}) => 
       <button
         className="flex  align-middle vote"
         type="button"
+        onClick={() => handleVote("votesFalse")}
         disabled={isUpdating}
       >
         ⛔️ {votingFalse}
