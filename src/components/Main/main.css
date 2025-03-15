@@ -1,7 +1,11 @@
 .main {
   display: grid;
-  grid-template-columns: 300px 80%;
+  grid-template-columns: 300px 78%;
   column-gap: 2rem;
+  /* background-color: #fff; */
+  padding:0 10px;
+  height: calc(90vh - 1rem - 40px);
+
 }
 
 .data {
@@ -9,4 +13,5 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  overflow: scroll;
 }

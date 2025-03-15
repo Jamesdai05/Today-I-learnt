@@ -14,6 +14,7 @@ section {
   border-radius:16px ;
   letter-spacing: -1px;
   font-weight: 200;
+  
 }
 
 section p {
@@ -45,4 +46,10 @@ a{
 a:hover {
   text-decoration: underline;
   color:wheat;
+}
+
+.disputed {
+  color: #7D0A0A;
+  font-size: 1.5rem;
+  font-weight: 600;
 }

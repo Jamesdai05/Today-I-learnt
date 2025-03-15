@@ -15,6 +15,7 @@ const Card = ({fact,setFacts}) => {
   // in case the categoryInfo is not in the array
   const color = categoryInfo?.color || "oklch(0.577 0.245 27.325)";
 
+  const isdisputed=fact.votesInteresting + fact.votesMindblowing < fact.votesFalse
 
   const handleVote=async(columnName)=>{
     // console.log("voted")
@@ -37,7 +38,7 @@ const Card = ({fact,setFacts}) => {
   return (
     <section className="p-2">
       <p>
-        {fact.fact}<a href={fact.resource}>(Source)</a>
+        {isdisputed ?  <span className="disputed">(Disputed ⛔️)</span> : null }{fact.fact}<a href={fact.resource}>(Source)</a>
       </p>
       <div className="tag">
         <Button color={color}>{fact.category}</Button>
