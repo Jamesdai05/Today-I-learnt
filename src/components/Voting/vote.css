@@ -15,3 +15,11 @@
   flex-shrink: 0;
   flex-grow: 0;
 }
+
+.vote:hover{
+  background-color: #a09b9b;
+}
+
+.vote:disabled{
+  background-color: #44403c;
+}

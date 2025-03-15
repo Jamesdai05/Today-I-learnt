@@ -37,7 +37,7 @@ const Form = ({setFacts}) => {
           setError(error.message);
           console.error(error?.data?.message || error?.error)
         }
-        setFacts(prev=>[...prev,newFact])
+        if(!error) setFacts(prev=>[...prev,newFact])
         setResource("http://example.com")
         setCategory("")
         setFact("")

@@ -7,7 +7,7 @@ import "./main.css";
 // import { initialFacts } from "../../data.js";
 
 
-const Main = ({facts,setCurrentCategory}) => {
+const Main = ({facts,setCurrentCategory,setFacts}) => {
 
 
   return (
@@ -24,12 +24,8 @@ const Main = ({facts,setCurrentCategory}) => {
             facts.map((ele) => (
               <Card
                 key={ele.id}
-                fact={ele.fact}
-                category={ele.category}
-                resource={ele.resource}
-                interesting={ele.votesInteresting}
-                mindBlowing={ele.votesMindblowing}
-                votesFalse={ele.votesFalse}
+                fact={ele}
+                setFacts={setFacts}
               />
             ))
           )}

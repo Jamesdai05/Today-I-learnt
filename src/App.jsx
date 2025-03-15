@@ -52,7 +52,8 @@ function App() {
       <Header toggle={toggle} handleClick={handleToggle}/>
       {toggle && <Form setFacts={setFacts}/>}
 
-      {isLoading ? <Loader /> : facts.length>0  ? <Main setFacts={setFacts} facts={facts} setCurrentCategory={setCurrentCategory}/> : <p className='text-2xl text-center'>No fact in this category. You can add one 😊!</p>}
+      {isLoading ? <Loader /> : facts.length>0  ? <Main setFacts={setFacts} facts={facts} setCurrentCategory={setCurrentCategory}/> : <p className='text-2xl text-center'>No facts are available now!</p>}
+      {fetchError && <p>FetchError occured</p>}
     </div>
   )
 }
