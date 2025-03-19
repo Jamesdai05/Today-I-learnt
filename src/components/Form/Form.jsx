@@ -49,6 +49,7 @@ const Form = ({setFacts}) => {
       }
     }else{
       setError("Please provide valide inputs!")
+      alert(error);
     }
   }
 
@@ -86,7 +87,7 @@ const Form = ({setFacts}) => {
           Post
         </button>
       </div>
-      {error && <p className="error-message">{error}</p>}
+      {/* {error && <p className="error-message">{error}</p>} */}
     </form>
   );
 }
