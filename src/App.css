@@ -27,3 +27,17 @@ h1 {
   font-family: "Coiny";
 }
 
+@media (max-width:900px) {
+  .main {
+    flex-direction: column;
+    
+  }
+  .sidebar{
+    flex-direction:column;
+  }
+  .sidebar > li {
+    width:100%;
+  }
+
+}
+

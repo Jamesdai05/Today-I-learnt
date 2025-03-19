@@ -60,6 +60,7 @@ const Form = ({setFacts}) => {
         placeholder="Share a fact with the wolrd"
         value={fact}
         onChange={(e) => setFact(e.target.value)}
+        className="form-text"
       />
       <span>{200 - length}</span>
       <input
@@ -67,6 +68,7 @@ const Form = ({setFacts}) => {
         placeholder="Trustworthy source"
         value={resource}
         onChange={(e) => setResource(e.target.value)}
+        className="form-resource"
       />
       <select
         name="category"
@@ -79,7 +81,9 @@ const Form = ({setFacts}) => {
           select a category
         </option>
         {CATEGORIES.map((c) => (
-          <option key={c.name} value={c.name.toLowerCase()}>{c.name.toUpperCase()}</option>
+          <option key={c.name} value={c.name.toLowerCase()}>
+            {c.name.toUpperCase()}
+          </option>
         ))}
       </select>
       <div className="post">

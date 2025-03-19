@@ -15,3 +15,11 @@
   overflow: scroll;
   overflow-x: hidden;
 }
+
+@media (max-width:900px) {
+  .main {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    height:auto;
+  }
+}

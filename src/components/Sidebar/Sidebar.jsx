@@ -4,7 +4,7 @@ import "./sidebar.css";
 
 const Sidebar = ({setCurrentCategory}) => {
   return (
-    <ul>
+    <ul className="sidebar">
       <li className="category all">
         <Button setCurrentCategory={setCurrentCategory}>all</Button>
       </li>

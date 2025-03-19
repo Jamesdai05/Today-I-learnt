@@ -64,3 +64,19 @@ select {
 .error-message {
   background-color: #ef4444;
 }
+
+@media (max-width:900px) {
+  .form-fact {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form-text,
+  .form-resource,
+  select,
+  .post > .btn {
+    flex:1;
+    width:100%;
+  }
+}

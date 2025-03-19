@@ -53,13 +53,16 @@ a:hover {
   font-weight: 600;
 }
 
+@media (max-width:800px) {
+  
+
+}
+
 @media (max-width:1250px) {
   section {
     flex-direction: column;
     align-items: flex-end;
     gap:12px;
   }
-
-  
-
 }
+
