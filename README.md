@@ -39,4 +39,5 @@ Through this project, I have further enhance the skills of apply Tailwindcss and
 - Improve the UI and UX of the application
 
 ## App Link
-- 
+
+The application is deployed to Netlify, you can access it here: [//today-i-learnt](https://todayilearntjames.netlify.app/)
